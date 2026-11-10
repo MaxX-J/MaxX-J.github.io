@@ -679,36 +679,47 @@ const PROJECTS_INPUT: ProjectInput[] = [
     },
   },
   {
-    // Hackathon 2026 de l'IUT, équipe Fabrikus World (MMI + ROB/IA + RT, 10-11 personnes) ; moi : dashboard + concept/pitch.
-    // Texte à compléter avec le document final rendu (l'utilisateur le cherche)
+    // 7e Hackathon de l'entrepreneuriat (IUT de Béziers, 17-20 mars 2026), équipe 11 pour Fabrikus World :
+    // 13 étudiants de 5 filières. Moi : l'application SmartWaste + concept et pitch.
+    // Page recentrée sur ma partie (demande de l'utilisateur) : le reste de la solution n'est résumé qu'en un paragraphe.
     title: 'SmartWaste', category: 'Dév web', context: 'Hackathon 2026 · équipe pluridisciplinaire', year: '2026', mmi: 2,
-    images: [`${HACK}/tableau-de-bord.webp`, `${HACK}/fiche-poubelle.webp`, `${HACK}/tableau-de-bord.webp`],
+    images: [`${HACK}/app-carte.webp`, `${HACK}/app-fiche.webp`, `${HACK}/app-statistiques.webp`],
     details: {
       pitch:
-        "Au hackathon 2026 de l'IUT, notre équipe a travaillé pour Fabrikus World, un parc d'attractions : SmartWaste, un tableau de bord qui montre aux équipes d'entretien quelles poubelles du parc vider en priorité.",
+        "Quatre jours de hackathon pour Fabrikus World, un parc d'attractions. Dans une équipe de treize étudiants de cinq filières, j'ai développé SmartWaste : l'application qui montre aux agents d'entretien quelles poubelles vider en priorité.",
       role: 'Développeur front & pitch',
-      duration: 'Hackathon',
-      context: 'Hackathon 2026, IUT de Béziers',
+      duration: '4 jours, du 17 au 20 mars 2026',
+      context: "7e Hackathon de l'entrepreneuriat, IUT de Béziers",
       tools: ['HTML', 'CSS', 'JavaScript'],
       problemTitle: 'Le défi',
       problem:
-        "Plusieurs commanditaires, et des équipes qui mélangeaient les filières de l'IUT : MMI, robotique et intelligence artificielle, réseaux et télécoms. Dans notre équipe d'une dizaine d'étudiants, chacun s'occupait de son domaine, mais l'idée est née ensemble, en brainstorming : aider les équipes d'entretien de Fabrikus World à savoir où intervenir, plutôt que de faire la tournée de toutes les poubelles.",
+        "Thème du hackathon : « Transition écologique et développement soutenable ». Fabrikus World voulait réduire les déchets de ses visiteurs et végétaliser le parc sans casser l'immersion de ses quatre univers. Notre équipe mélangeait MMI, réseaux et télécoms, robotique et IA, et carrières sociales : chacun dans son domaine, avec une même idée trouvée ensemble en brainstorming.",
+      sectionsTitle: 'Ma partie',
       sections: [
         {
-          title: 'Le tableau de bord',
-          text: "J'ai développé l'interface que verraient les agents : la carte du parc avec ses quatre zones (Farwest, Belle Époque, Pirate et Jungle), chaque poubelle placée et colorée selon son état, et à côté la liste triée par priorité d'intervention. Une poubelle a trois bacs (recyclage, verre, ordures) : la plus pleine passe en tête, de « Correct » à « À vider » puis « Critique ». Un clic ouvre sa fiche avec les jauges de chaque bac et un bouton pour l'ajouter à l'itinéraire. Dans cette maquette, les niveaux de remplissage sont simulés.",
-          images: [`${HACK}/fiche-poubelle.webp`],
+          title: "L'application SmartWaste",
+          text: "L'application des agents d'entretien. La carte du parc place chaque poubelle avec une couleur selon son remplissage (bleu, orange, rouge), et la liste à côté les trie par priorité d'intervention. Chaque poubelle a trois bacs (plastique, restes alimentaires, tout-venant) : sa fiche détaille chacun et permet de l'ajouter à l'itinéraire de collecte. Une vue de statistiques repère les poubelles surutilisées ou sous-utilisées et suggère où en ajouter.",
+          images: [`${HACK}/app-fiche.webp`, `${HACK}/app-statistiques.webp`],
         },
         {
-          title: 'Le pitch',
-          text: "J'ai aussi participé à la construction du concept et au pitch final : présenter en quelques minutes le problème du parc, la solution de l'équipe et la part de chaque filière.",
+          title: 'Le concept et le pitch',
+          text: "J'ai participé à la construction du concept avec toute l'équipe, puis au pitch final : présenter en quelques minutes le problème du parc et la solution de l'équipe.",
+        },
+        {
+          title: "Dans le projet de l'équipe",
+          text: "L'application reçoit les données de poubelles connectées imaginées par l'équipe : des capteurs mesurent le remplissage de chaque bac et l'envoient à un serveur central. Le projet comprenait aussi du compost, des zones fumeurs avec une campagne d'affiches, et la végétalisation de chaque univers du parc.",
         },
       ],
       steps: [
-        { title: 'Comprendre', text: 'Le besoin du commanditaire, discuté avec toute l’équipe.' },
-        { title: 'Imaginer', text: 'Le concept SmartWaste, trouvé ensemble en brainstorming.' },
-        { title: 'Développer', text: 'La carte, les jauges et le tri par priorité, en HTML, CSS et JavaScript.' },
-        { title: 'Pitcher', text: 'Présenter la solution de toute l’équipe.' },
+        { title: 'Comprendre', text: 'Le sujet du commanditaire et une visite du parc pour repérer les vrais usages.' },
+        { title: 'Imaginer', text: 'Le concept trouvé en équipe, en brainstorming.' },
+        { title: 'Développer', text: 'La carte, les jauges, le tri par priorité et les statistiques, en HTML, CSS et JavaScript.' },
+        { title: 'Pitcher', text: "Présenter la solution de toute l'équipe à la fin du hackathon." },
+      ],
+      results: [
+        { value: '4', label: 'jours de hackathon, du sujet au pitch final' },
+        { value: '13', label: "étudiants de cinq filières de l'IUT dans l'équipe" },
+        { value: '3', label: "vues dans l'application : la carte, la fiche d'une poubelle et les statistiques" },
       ],
     },
   },
