@@ -67,8 +67,6 @@ export const SKILLS = [
 export const CATEGORIES = ['UI/UX', 'Dév web', '3D & Unity', 'Motion', 'Graphisme', 'Vidéo'] as const;
 export type Category = (typeof CATEGORIES)[number];
 
-// Aperçus des sites du prompt (1re image des GIF de motionsites.ai, en WebP léger : les GIF faisaient ~10 Mo chacun)
-const preview = (n: number) => `/images/marquee/${String(n).padStart(2, '0')}.webp`;
 
 // Contenu de la page détaillée d'un projet. Les champs optionnels masquent leur section s'ils sont absents.
 export type ProjectDetails = {
@@ -860,10 +858,9 @@ export function getProjectDetails(p: Project): ProjectDetails {
 }
 
 
-// 20 aperçus (le 21e du prompt n'existe plus en ligne)
-// image principale des projets (Architruc en a deux), recadrée en 840x540 (voir public/images/marquee)
-// les 3 dernières ont un nom (et non un numéro) : un fichier remplacé sous le même nom reste en cache chez les visiteurs
+// Bandeau sous le hero : les plus belles images, pas une par projet (840x540, voir public/images/marquee).
+// Première moitié = ligne du haut, seconde = ligne du bas. Un fichier remplacé doit changer de nom (cache des visiteurs).
 export const MARQUEE_IMAGES = [
-  ...Array.from({ length: 11 }, (_, i) => preview(i + 1)),
-  ...['architruc-realisations', 'loup-garou', 'planet-brick'].map((name) => `/images/marquee/${name}.webp`),
-];
+  'bloons-ballons', 'architruc-accueil', 'gestion-mmi-sombre', 'kill-bill-duel', 'blockchain-archipel', 'app-budget', 'je-filme-matrix',
+  'bloons-carte', 'marathon-jeux', 'architruc-golfe', 'vivre-beziers', 'bloons-menu', 'trench-hero', 'pub-pianiste',
+].map((name) => `/images/marquee/${name}.webp`);
