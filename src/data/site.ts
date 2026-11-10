@@ -889,5 +889,5 @@ export function getProjectDetails(p: Project): ProjectDetails {
 
 
 // 20 aperçus (le 21e du prompt n'existe plus en ligne)
-// 24 captures des projets, recadrées en 840x540 (voir public/images/marquee)
-export const MARQUEE_IMAGES = Array.from({ length: 24 }, (_, i) => preview(i + 1));
+// image principale de chacun des 14 projets, recadrée en 840x540 (voir public/images/marquee)
+export const MARQUEE_IMAGES = Array.from({ length: 14 }, (_, i) => preview(i + 1));
