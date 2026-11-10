@@ -18,7 +18,13 @@ export default function ContactSection() {
           Parlons-en
         </span>
       </FadeIn>
-      <FadeIn delay={0.1} className="mt-6 sm:mt-10">
+      <FadeIn delay={0.05} className="mt-6 sm:mt-10">
+        <span className="inline-flex items-center gap-2 rounded-full bg-[#FFF1E4] px-4 py-2 text-sm font-semibold text-orange-accent sm:text-base">
+          <span className="h-2 w-2 rounded-full bg-orange-accent" />
+          {CONTACT.stage}
+        </span>
+      </FadeIn>
+      <FadeIn delay={0.1} className="mt-4 sm:mt-6">
         <p className="max-w-[330px] text-encre/70 sm:max-w-none" style={{ fontSize: 'clamp(1rem, 1.7vw, 1.5rem)' }}>
           Un stage, un projet, une question ? Écris-moi, je réponds vite.
         </p>

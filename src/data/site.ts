@@ -5,6 +5,8 @@ export const CONTACT = {
   github: 'https://github.com/MaxX-J',
   // Dépose ton CV en PDF dans public/ sous ce nom
   cv: '/cv-maxens-sevilla.pdf',
+  // Dates du stage de 3e année, affichées dans la section contact (à confirmer)
+  stage: 'Stage du 2 février au 24 avril 2027',
 };
 
 // Dans l'ordre de l'accueil ; tous mènent à une section de l'accueil (id = l'ancre)
