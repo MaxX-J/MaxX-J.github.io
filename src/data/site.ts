@@ -133,7 +133,6 @@ const TRENCH = '/images/projets/trench-hero';
 const VIVRE = '/images/projets/vivre-beziers';
 const FILME = '/images/projets/je-filme';
 const CHAIN = '/images/projets/blockchain-3d';
-const SPOTIFY = '/images/projets/spotify-stats';
 const LOUP = '/images/projets/loup-garou';
 const HACK = '/images/projets/hackathon';
 // Vidéo d'origine (112 Mo, jamais réencodée) : trop lourde pour GitHub Pages, elle est dans la release « medias » du dépôt
@@ -183,12 +182,12 @@ const PROJECTS_INPUT: ProjectInput[] = [
         { title: 'Mise en ligne & SEO', text: 'Hébergement, référencement, redirections, Search Console, optimisations et un README pour la suite.' },
       ],
       results: [
-        { value: '93', label: 'sur 100 en performance sur mobile, contre 56 pour l’ancien site' },
-        { value: '99', label: 'sur 100 sur ordinateur, contre 69 avant la refonte' },
-        { value: '9', label: 'pages conçues et codées, du site vitrine à la page Archi Business' },
+        { value: '93', label: 'sur 100 sur mobile dans PageSpeed. L’ancien site était à 56.' },
+        { value: '99', label: 'sur 100 sur ordinateur. L’ancien site était à 69.' },
+        { value: '9', label: 'pages que j’ai conçues, codées et mises en ligne' },
       ],
       learning:
-        "Avant de refaire l'apparence d'un site, il faut comprendre comment l'entreprise s'en sert : c'est ce qui m'a fait abandonner WordPress. Et la mise en ligne n'est pas la fin d'un projet : c'est en production que j'ai trouvé les redirections cassées.",
+        "Au départ, je devais juste mettre à jour le WordPress. En regardant comment l'équipe s'en servait, j'ai vu qu'elle n'y touchait jamais, et c'est ce qui m'a décidé à repartir de zéro. J'ai aussi compris qu'un site n'est pas fini le jour où il est en ligne : les redirections cassées, je ne les ai vues qu'une fois en production.",
       photos: [
         // d'autres pages du site, qui n'apparaissent pas plus haut
         'galerie-golfe', 'galerie-golfe-galerie', 'galerie-conexio', 'galerie-conexio-galerie', 'galerie-projets', 'galerie-esprit',
@@ -218,7 +217,7 @@ const PROJECTS_INPUT: ProjectInput[] = [
         { title: "Prête pour l'impression", text: 'Une photo USM au meuble orange, mise au propre dans InDesign et exportée en PDF/X-4.' },
       ],
       learning:
-        "Adapter mes propositions aux retours, mais aussi défendre un choix quand il sert le message : retirer la liste des marques a rendu la parution plus lisible.",
+        "J'ai revu ma proposition à chaque retour, y compris quand une piste déjà validée a été refusée. Mais j'ai aussi tenu bon sur une idée, retirer la liste des marques, et la page est bien plus lisible sans.",
       // les pistes de travail, dans l'ordre
       photos: [1, 2, 3, 4].map((n) => `${ARCHI}/parution-piste-${n}.webp`),
     },
@@ -231,24 +230,25 @@ const PROJECTS_INPUT: ProjectInput[] = [
         "Un tower defense en réalité virtuelle dans l'univers de Bloons TD : on tire à l'arc sur les ballons, on pose ses singes à la main sur une maquette et on fait tourner sa bananeraie pour tout payer.",
       role: 'Gameplay, économie & sons',
       duration: '3 semaines',
-      context: 'SAÉ BUT MMI 3, équipe de 2',
+      context: 'SAÉ BUT MMI 3, équipe de 3',
       tools: ['Unity 6', 'C#', 'Meta Quest 3', 'Blender'],
-      // GDD : lien vers la version « main » sur GitHub, toujours à jour (le document est encore en cours)
+      // GDD : le PDF (version longue illustrée), dans public/docs ; à remplacer quand le document évolue
       links: [
-        { label: 'GDD (en cours)', href: 'https://github.com/dyzlek/SAE501/blob/main/docs/GDD.md' },
+        { label: 'GDD (en cours)', href: '/docs/gdd-bloons-vr.pdf' },
         { label: 'Code source', href: 'https://github.com/dyzlek/SAE501' },
       ],
       problemTitle: 'Le projet',
       problemImages: [`${BLOONS}/cabane-exterieur.webp`],
       problem:
-        "SAÉ de 3e année de BUT MMI à l'IUT de Béziers : un jeu en réalité virtuelle sous Unity pour Meta Quest, en équipe de deux et en trois semaines, encadrés par quatre enseignants. On incarne Quincy : on tire à l'arc sur les ballons, on pose ses singes à la main sur une maquette de la carte, et on récolte des bananes pour financer le tout. Semaine 1, prouver : un prototype gris jouable au casque. Semaine 2, construire : le jeu complet, du menu jusqu'aux 100 vagues. Le jeu s'accompagne d'un game design document (GDD), qui décrit le concept, les mécaniques et l'équilibrage : il est encore en cours et évolue avec le projet.",
+        "SAÉ de 3e année de BUT MMI à l'IUT de Béziers : un jeu en réalité virtuelle sous Unity pour Meta Quest, en équipe de trois et en trois semaines, encadrés par quatre enseignants. On incarne Quincy : on tire à l'arc sur les ballons, on pose ses singes à la main sur une maquette de la carte, et on récolte des bananes pour financer le tout. Semaine 1, prouver : un prototype gris jouable au casque. Semaine 2, construire : le jeu complet, du menu jusqu'aux 100 vagues. Le jeu s'accompagne d'un game design document (GDD), qui décrit le concept, les mécaniques et l'équilibrage : il est encore en cours et évolue avec le projet.",
       team: [
         { name: 'Dylan', role: 'Hub, carte et singes, intégration, dépôt Git' },
         { name: 'Maxens (moi)', role: "Économie : la bananeraie, bonus de gameplay, casino, sons, coffre et raretés, améliorations de l'arc" },
+        { name: 'Nicolas', role: '' },
       ],
       sectionsTitle: 'Le jeu',
       sectionsIntro:
-        "Le hub est passé d'un cercle de cubes gris à une cabane posée au milieu des montagnes. Pour avancer à deux sans se marcher dessus : une branche par tâche, des pull requests relues, un tableau d'issues GitHub, un test au casque par jour et un build chaque vendredi. Chacun tient un journal de bord, y compris son usage de l'IA.",
+        "Le hub est passé d'un cercle de cubes gris à une cabane posée au milieu des montagnes. Pour avancer sans se marcher dessus : une branche par tâche, des pull requests relues, un tableau d'issues GitHub, un test au casque par jour et un build chaque vendredi. Chacun tient un journal de bord, y compris son usage de l'IA.",
       sectionsIntroImages: [`${BLOONS}/avant-hub-gris.webp`, `${BLOONS}/apres-cabane.webp`],
       sections: [
         {
@@ -298,7 +298,7 @@ const PROJECTS_INPUT: ProjectInput[] = [
         },
       ],
       learning:
-        "Mesurer avant de corriger : les singes récolteurs semblaient se bloquer, ils n'avançaient en fait qu'au tiers de leur vitesse à cause de l'interpolation physique. Et en VR, chaque idée se valide au casque, pas dans l'éditeur.",
+        "Je croyais que les singes récolteurs se bloquaient. En mesurant, j'ai vu qu'ils avançaient bien, mais au tiers de leur vitesse, à cause de l'interpolation physique. Depuis, je mesure avant de corriger. Et en VR, je teste chaque idée au casque, parce que dans l'éditeur on ne se rend compte de rien.",
       // de nouvelles captures (ma partie surtout), qui n'apparaissent pas plus haut
       photos: [
         'allee-vers-porte', 'allee-vue', 'bananeraie-portail', 'bananeraie-singes-dehors', 'arc-tendu', 'vr-fleche-encochee',
@@ -379,11 +379,11 @@ const PROJECTS_INPUT: ProjectInput[] = [
       ],
       results: [
         { value: '15', label: 'écrans, chacun en clair et en sombre, sur ordinateur et sur téléphone' },
-        { value: '42', label: 'idées issues de la recherche, triées par impact et par effort' },
-        { value: '4', label: 'prototypes cliquables : les deux parcours, enseignant et chef de département, sur ordinateur et sur téléphone' },
+        { value: '1', label: 'seule demande pour déplacer plusieurs cours, au lieu d’une par cours dans l’ancien outil' },
+        { value: '4', label: 'prototypes cliquables, un par parcours (enseignant, chef de département), sur ordinateur et sur téléphone' },
       ],
       learning:
-        "Un questionnaire trop long ne récolte que des « RAS » : la version courte, envoyée aux bons profils, m'en a appris bien plus. Et tant qu'il n'est pas testé par de vrais enseignants, un prototype reste une hypothèse : c'est la prochaine étape.",
+        "Mon premier questionnaire était trop long, et tout le monde répondait « RAS ». Je l'ai raccourci et envoyé aux enseignants titulaires, et là j'ai eu de vrais retours. Il me reste à faire tester le prototype par des enseignants : pour l'instant, je ne sais pas encore s'il leur convient vraiment.",
       // des écrans qui n'apparaissent pas plus haut
       photos: [
         'connexion', 'galerie-wireframe-accueil', 'galerie-enseignants', 'galerie-journal', 'galerie-compte', 'galerie-planning-departement',
@@ -543,7 +543,7 @@ const PROJECTS_INPUT: ProjectInput[] = [
         },
         {
           title: 'Sélectionnée au Grand Rex',
-          text: "Notre vidéo a été retenue pour la cérémonie officielle du concours, au Grand Rex à Paris. Nous n'avons pas remporté de prix, mais c'était une vraie reconnaissance pour un premier projet vidéo complet en équipe, de l'écriture du scénario au tournage avec nos professeurs et nos camarades.",
+          text: "Notre vidéo a été retenue pour la cérémonie officielle du concours, au Grand Rex à Paris. Une vraie reconnaissance pour un premier projet vidéo complet en équipe, de l'écriture du scénario au tournage avec nos professeurs et nos camarades.",
         },
         {
           title: 'Publicité sur la musique',
@@ -604,38 +604,6 @@ const PROJECTS_INPUT: ProjectInput[] = [
         { title: 'Imaginer', text: 'Une métaphore par notion et une direction artistique en papier découpé.' },
         { title: 'Construire', text: 'Le parcours en huit étapes, chacune avec son interaction, intégré en Three.js.' },
         { title: 'Tester', text: 'Un protocole de test et un questionnaire de compréhension, puis des corrections.' },
-      ],
-    },
-  },
-  {
-    // Premier projet JavaScript, gardé pour montrer l'évolution. Données : une playlist Spotify réelle (pas forcément la mienne)
-    title: 'Spotify Stats', category: 'Dév web', context: 'Premier projet JavaScript', year: '2025', mmi: 1,
-    images: [`${SPOTIFY}/accueil.webp`, `${SPOTIFY}/albums.webp`, `${SPOTIFY}/details-morceau.webp`],
-    details: {
-      pitch:
-        "Mon tout premier site en JavaScript, en première année : un tableau de bord de statistiques Spotify. Je le garde ici pour montrer d'où je suis parti.",
-      role: 'Développeur web',
-      duration: 'Semestre 2',
-      context: 'BUT MMI 1, IUT de Béziers',
-      tools: ['JavaScript', 'Bootstrap', 'Chart.js', 'JSON'],
-      problemTitle: 'Le projet',
-      problem:
-        "À partir d'un export de données Spotify réelles, le site affiche le top 10 des artistes, la répartition des genres, les albums les plus écoutés et la liste complète des morceaux. Un clic sur un morceau ouvre une fenêtre avec sa pochette, un extrait audio, sa popularité et ses artistes.",
-      sections: [
-        {
-          title: 'Mes débuts avec le DOM',
-          text: "Tout est généré en JavaScript à partir d'un fichier JSON : les graphiques avec Chart.js, les cartes d'albums et le tableau des morceaux. C'est aussi là que j'ai découvert Bootstrap, en construisant les fenêtres de détail, et que j'ai compris l'importance d'une navigation claire et d'une mise en page responsive.",
-          images: [`${SPOTIFY}/albums.webp`, `${SPOTIFY}/details-morceau.webp`, `${SPOTIFY}/liste-morceaux.webp`],
-        },
-        {
-          title: 'Le chemin parcouru',
-          text: "Un an et demi plus tard, je conçois mes interfaces dans Figma avant de les coder, je travaille avec React, Next.js et TypeScript, et je relie mes sites à de vraies bases de données. Ce premier projet reste la base de tout le reste.",
-        },
-      ],
-      steps: [
-        { title: 'Lire les données', text: "Charger et parcourir un fichier JSON d'export Spotify." },
-        { title: 'Visualiser', text: 'Deux graphiques Chart.js : top des artistes et répartition des genres.' },
-        { title: 'Afficher', text: 'Cartes, tableau et fenêtres de détail générés dans le DOM avec Bootstrap.' },
       ],
     },
   },
@@ -717,11 +685,6 @@ const PROJECTS_INPUT: ProjectInput[] = [
         { title: 'Développer', text: 'La carte, les jauges, le tri par priorité et les statistiques, en HTML, CSS et JavaScript.' },
         { title: 'Pitcher', text: "Présenter la solution de toute l'équipe à la fin du hackathon." },
       ],
-      results: [
-        { value: '4', label: 'jours de hackathon, du sujet au pitch final' },
-        { value: '13', label: "étudiants de cinq filières de l'IUT dans l'équipe" },
-        { value: '3', label: "vues dans l'application : la carte, la fiche d'une poubelle et les statistiques" },
-      ],
     },
   },
   {
@@ -774,7 +737,7 @@ const PROJECTS_INPUT: ProjectInput[] = [
         { title: 'Adapter à la borne', text: 'Des commandes réduites au joystick et aux boutons, pour jouer à un ou à deux.' },
       ],
       learning:
-        "Adapter un jeu à une borne d'arcade oblige à tout simplifier : avec un joystick et deux boutons, chaque action doit se comprendre sans explication. Et à trois, bien se répartir le travail compte autant que le code.",
+        "Avec un joystick et deux boutons, on ne peut pas tout garder. Il a fallu simplifier le jeu jusqu'à ce que chaque action se comprenne sans explication.",
       photos: ['niveau1-1', 'game-over', 'niveau3-1', '1vs1-2'].map((name) => `${TRENCH}/${name}.webp`),
     },
   },
@@ -824,7 +787,7 @@ const PROJECTS_INPUT: ProjectInput[] = [
         { title: 'Sécuriser', text: 'Mots de passe hachés, requêtes préparées, échappement des textes et contrôle des rôles.' },
       ],
       learning:
-        "C'est ici que j'ai découvert le duo PHP et base de données : penser les tables avant les pages, et ne jamais faire confiance à ce que l'utilisateur envoie.",
+        "C'est mon premier projet avec PHP et une base de données. J'y ai appris à réfléchir aux tables avant de coder les pages, et à me méfier de tout ce que l'utilisateur peut envoyer.",
       photos: ['catalogue-technic', 'set-falcon', 'connexion', 'inscription', 'admin', 'admin-sets'].map((name) => `${BRICK}/${name}.webp`),
     },
   },
@@ -896,5 +859,5 @@ export function getProjectDetails(p: Project): ProjectDetails {
 
 
 // 20 aperçus (le 21e du prompt n'existe plus en ligne)
-// image principale de chacun des 14 projets, recadrée en 840x540 (voir public/images/marquee)
-export const MARQUEE_IMAGES = Array.from({ length: 14 }, (_, i) => preview(i + 1));
+// image principale de chacun des 13 projets, recadrée en 840x540 (voir public/images/marquee)
+export const MARQUEE_IMAGES = Array.from({ length: 13 }, (_, i) => preview(i + 1));
