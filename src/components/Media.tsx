@@ -8,9 +8,13 @@ const youTubeId = (src: string) => src.slice('youtube:'.length);
 
 export const isVideo = (src: string) => isYouTube(src) || /\.(mp4|webm)$/i.test(src);
 
-// Image fixe d'une vidéo : même nom, en .webp (ex. vox.mp4 → vox.webp), ou l'aperçu de YouTube
-export const posterOf = (src: string) =>
-  isYouTube(src) ? `https://img.youtube.com/vi/${youTubeId(src)}/maxresdefault.jpg` : src.replace(/\.(mp4|webm)$/i, '.webp');
+// Image fixe d'une vidéo : même nom, en .webp (ex. vox.mp4 → vox.webp), ou l'aperçu de YouTube.
+// Vidéo hébergée ailleurs (release GitHub, trop lourde pour Pages) : son image reste sur le site, dans /videos/posters/
+export const posterOf = (src: string) => {
+  if (isYouTube(src)) return `https://img.youtube.com/vi/${youTubeId(src)}/maxresdefault.jpg`;
+  if (/^https?:\/\//.test(src)) return `/videos/posters/${src.split('/').pop()!.replace(/\.(mp4|webm)$/i, '.webp')}`;
+  return src.replace(/\.(mp4|webm)$/i, '.webp');
+};
 
 type MediaProps = {
   src: string;

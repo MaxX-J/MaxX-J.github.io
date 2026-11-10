@@ -136,7 +136,8 @@ const CHAIN = '/images/projets/blockchain-3d';
 const SPOTIFY = '/images/projets/spotify-stats';
 const LOUP = '/images/projets/loup-garou';
 const HACK = '/images/projets/hackathon';
-const FILME_VIDEO = '/videos/je-filme';
+// Vidéo d'origine (112 Mo, jamais réencodée) : trop lourde pour GitHub Pages, elle est dans la release « medias » du dépôt
+const FILME_VIDEO = 'https://github.com/MaxX-J/MaxX-J.github.io/releases/download/medias';
 
 const PROJECTS_INPUT: ProjectInput[] = [
   {
