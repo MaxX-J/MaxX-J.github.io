@@ -62,7 +62,7 @@ export const SKILLS = [
   },
 ];
 
-export const CATEGORIES = ['UI/UX', 'Dév web', '3D & Unity', 'Motion', 'Graphisme'] as const;
+export const CATEGORIES = ['UI/UX', 'Dév web', '3D & Unity', 'Motion', 'Graphisme', 'Vidéo'] as const;
 export type Category = (typeof CATEGORIES)[number];
 
 // Aperçus des sites du prompt (1re image des GIF de motionsites.ai, en WebP léger : les GIF faisaient ~10 Mo chacun)
@@ -521,7 +521,7 @@ const PROJECTS_INPUT: ProjectInput[] = [
   {
     // Deux vidéos de 1re année. « Je filme ma formation » : fichier d'origine non réencodé (choix de l'utilisateur),
     // montage crédité à une coéquipière, ne pas me l'attribuer. Pub musique : intégrée depuis YouTube (rien de téléchargé).
-    title: 'Vidéo', category: 'Motion', context: 'Court-métrage & concours · en équipe', year: '2025', mmi: 1,
+    title: 'Vidéo', category: 'Vidéo', context: 'Court-métrage & concours · en équipe', year: '2025', mmi: 1,
     images: [`${FILME_VIDEO}/je-filme-ma-formation.mp4`, 'youtube:aPt2vD_mj0k', `${FILME}/hero-pianiste.webp`],
     cover: `${FILME}/hero-pianiste.webp`,
     details: {
@@ -868,6 +868,12 @@ const DEFAULT_STEPS: Record<Category, { title: string; text: string }[]> = {
     { title: 'Design', text: 'Styles, couleurs et éléments graphiques.' },
     { title: 'Animation', text: 'Mouvements, timing et transitions.' },
     { title: 'Export', text: 'Formats adaptés au web et aux réseaux.' },
+  ],
+  Vidéo: [
+    { title: 'Scénario', text: "L'idée, le message et le découpage." },
+    { title: 'Tournage', text: 'Cadrage, lumière et prise de son.' },
+    { title: 'Montage', text: 'Rythme, son et étalonnage.' },
+    { title: 'Diffusion', text: 'Export et mise en ligne.' },
   ],
 };
 
