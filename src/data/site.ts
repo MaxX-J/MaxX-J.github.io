@@ -113,6 +113,7 @@ type ProjectInput = {
   logo?: string;
   // Image du haut de la page projet, si elle doit différer de la 1re image (par défaut : l'image fixe de la vidéo)
   cover?: string;
+  // Étiquette affichée à côté du projet (ex. « En cours »)
   tag?: string;
   details?: ProjectDetails;
 };
@@ -224,7 +225,7 @@ const PROJECTS_INPUT: ProjectInput[] = [
   },
   {
     title: 'Bloons VR', category: '3D & Unity', context: 'SAÉ · en équipe', year: '2026', mmi: 3,
-    images: [`${BLOONS}/bananeraie.webp`, `${BLOONS}/maquette-direct.webp`, `${BLOONS}/menu.webp`], home: 2, tag: 'Nouveau',
+    images: [`${BLOONS}/bananeraie.webp`, `${BLOONS}/maquette-direct.webp`, `${BLOONS}/menu.webp`], home: 2, tag: 'En cours',
     details: {
       pitch:
         "Un tower defense en réalité virtuelle dans l'univers de Bloons TD : on tire à l'arc sur les ballons, on pose ses singes à la main sur une maquette et on fait tourner sa bananeraie pour tout payer.",

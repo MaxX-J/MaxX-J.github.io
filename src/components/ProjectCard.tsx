@@ -18,7 +18,10 @@ export default function ProjectCard({ project }: { project: Project }) {
       </div>
       <div className="flex items-center justify-between">
         <ToolChip label={project.category} />
-        <span className="text-sm font-medium text-encre/50">{yearLabel(project)}</span>
+        <span className="text-sm font-medium text-encre/50">
+          {project.tag && <span className="mr-2 font-semibold text-orange-accent">{project.tag}</span>}
+          {yearLabel(project)}
+        </span>
       </div>
       <div className="flex items-center justify-between gap-4">
         <h3 className="font-display text-xl font-medium uppercase text-encre md:text-[26px]">{project.title}</h3>

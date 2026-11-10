@@ -22,8 +22,6 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run build
-      # React Router : une page inconnue renvoie l'appli, qui affiche la bonne route
-      - run: cp dist/index.html dist/404.html
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist

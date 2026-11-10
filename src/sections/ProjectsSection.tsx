@@ -35,7 +35,7 @@ function StackCard({ project, index, total, progress }: CardProps) {
           </span>
           <div className="flex flex-1 flex-col gap-1">
             <span className="text-xs font-medium uppercase tracking-[0.1em] text-white/80 sm:text-base">
-              {project.category} · {project.context}
+              {project.category} · {project.context}{project.tag ? ` · ${project.tag}` : ''}
             </span>
             <h3 className="font-display font-medium uppercase text-white" style={{ fontSize: 'clamp(1.25rem, 2.2vw, 2rem)' }}>
               {project.title}

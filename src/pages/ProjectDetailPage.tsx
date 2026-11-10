@@ -173,6 +173,11 @@ function ProjectDetail({ index }: { index: number }) {
                 {tag}
               </span>
             ))}
+            {project.tag && (
+              <span className="rounded-full border-[1.5px] border-white bg-white px-3 py-1.5 text-[13px] font-semibold text-orange-accent md:px-4 md:py-2 md:text-[15px]">
+                {project.tag}
+              </span>
+            )}
           </FadeIn>
           <FadeIn immediate delay={0.2} y={40} as="h1">
             <span
