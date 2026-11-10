@@ -2,7 +2,7 @@ import { AnimatePresence, motion, useMotionValueEvent, useScroll, useTransform }
 import type { MotionValue } from 'framer-motion';
 import { useEffect, useRef, useState } from 'react';
 import Button from '../components/Button';
-import { ABOUT_TEXT, CONTACT, SKILLS } from '../data/site';
+import { ABOUT_TEXT, CONTACT, PROJECTS } from '../data/site';
 import { scrollToY } from '../lib/smoothScroll';
 
 // Le manifeste de la v2, épinglé, puis le badge </> qui s'ouvre comme une balise.
@@ -17,9 +17,9 @@ const WORDS: { text: string; strong?: boolean }[] = [
 ];
 
 const STATS: [value: string, label: string][] = [
-  ['3 ans', 'BUT MMI'],
-  [String(SKILLS.length), 'Domaines'],
-  ['1', 'Stage recherché'],
+  [String(PROJECTS.length), 'Projets ici'],
+  ['1', 'Site client en ligne'],
+  ['12 sem.', 'De stage, dès février'],
 ];
 
 // Repères du défilement (0 → 1 sur toute la section)

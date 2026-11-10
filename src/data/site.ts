@@ -19,7 +19,7 @@ export const NAV_LINKS = [
 
 // Présentation affichée quand le badge </> s'ouvre
 export const ABOUT_TEXT =
-  "Designer UI/UX avant tout, je navigue aussi entre le code et la 3D. Je conçois des interfaces claires, je les développe pour le web et je crée des expériences interactives sous Unity. Je cherche un stage pour mettre tout ça au service d'une équipe : on construit quelque chose ensemble ?";
+  "Je dessine une interface, je la code, puis je passe beaucoup trop de temps sur le détail que personne n'avait demandé. Curieux de tout, je touche à tout : design, web, 3D, son. Et quand je commence quelque chose, je le finis. Le reste du temps, je joue, ou je me lance dans un projet perso de plus. Je cherche un stage du 2 février au 24 avril 2027.";
 
 const V2 = '/images/projets/v2';
 
