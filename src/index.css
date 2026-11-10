@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Défilement fluide géré par Lenis (src/lib/smoothScroll.ts) : pas de scroll-behavior natif, qui le ferait saccader */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #ff8233;
+  color: #1f140d;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Dégradés de la direction artistique (page 404 orange) */
+.bg-hero {
+  background: linear-gradient(180deg, #ff8233 0%, #fdac55 100%);
+}
+
+/* Fond du bureau 3D : blanc + trame de points orange (reprise de la v2) */
+.desk-dots {
+  background:
+    radial-gradient(rgba(241, 101, 36, 0.22) 1.2px, transparent 1.4px) 0 0 / 22px 22px,
+    #ffffff;
+}
+
+@keyframes skill-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: none; }
+}
+
+.bg-hero-reverse {
+  background: linear-gradient(180deg, #fdac55 0%, #ff8233 100%);
+}
+
+.bg-menu {
+  background: linear-gradient(135deg, #ff6b1a 0%, #ff9642 100%);
+}
+
+.mask-fade-bottom {
+  -webkit-mask-image: linear-gradient(to bottom, black 40%, transparent 95%);
+  mask-image: linear-gradient(to bottom, black 40%, transparent 95%);
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
