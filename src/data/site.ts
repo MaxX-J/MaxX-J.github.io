@@ -19,7 +19,7 @@ export const NAV_LINKS = [
 
 // Présentation affichée quand le badge </> s'ouvre
 export const ABOUT_TEXT =
-  "Je dessine une interface, je la code, puis je passe beaucoup trop de temps sur le détail que personne n'avait demandé. Curieux de tout, je touche à tout : design, web, 3D, son. Et quand je commence quelque chose, je le finis. Le reste du temps, je joue, ou je me lance dans un projet perso de plus. Je cherche un stage du 2 février au 24 avril 2027.";
+  "Je dessine une interface, je la code, puis je passe beaucoup trop de temps sur le détail que personne n'avait demandé. Curieux de tout, je touche à tout : design, web, 3D, son. Et quand je commence quelque chose, je le finis. Le reste du temps, je joue, je fais du sport, ou je me lance dans un projet perso de plus. Je cherche un stage du 2 février au 24 avril 2027.";
 
 const V2 = '/images/projets/v2';
 
@@ -29,7 +29,7 @@ export const SKILLS = [
     // Mot affiché dans « Je conçois et je code »
     word: 'Des interfaces',
     description:
-      'Recherche utilisateur, wireframes, prototypes et design systems : des interfaces pensées pour être simples, belles et utiles.',
+      "J'écoute d'abord ceux qui vont s'en servir, puis je dessine dans Figma jusqu'à ce qu'on n'ait plus besoin de mode d'emploi.",
     tools: ['Figma', 'FigJam', 'Photoshop', 'Illustrator'],
     image: '/images/projets/gestion-mmi/accueil-responsable.webp',
     alt: "L'accueil de Gestion MMI",
@@ -38,7 +38,7 @@ export const SKILLS = [
     name: 'Développement web',
     word: 'Des sites web',
     description:
-      "Intégration au pixel près, sites responsives et animés, du prototype jusqu'à la mise en ligne.",
+      "Je code ce que j'ai dessiné, du premier écran jusqu'à la mise en ligne. Et je vérifie que ça tient aussi sur téléphone, pas seulement sur mon écran.",
     tools: ['HTML / CSS', 'JavaScript', 'React', 'Tailwind'],
     image: '/images/projets/architruc/couverture.webp',
     alt: "Le site Architruc & Baltaz'art",
@@ -47,7 +47,7 @@ export const SKILLS = [
     name: '3D & Unity',
     word: 'Des jeux et de la VR',
     description:
-      'Modélisation, rendu et expériences interactives en temps réel, du mini-jeu au prototype immersif.',
+      "Des jeux qu'on peut vraiment lancer : en VR, sur une borne d'arcade ou dans le navigateur. Avec les sons, les vibrations et les petits bonus qui vont avec.",
     tools: ['Unity', 'C#', 'Blender'],
     image: '/images/projets/bloons-vr/bananeraie.webp',
     alt: 'La bananeraie de Bloons VR',
@@ -56,7 +56,7 @@ export const SKILLS = [
     name: 'Motion design',
     word: 'Des animations',
     description:
-      'Animations et micro-interactions qui donnent du rythme et de la personnalité aux interfaces.',
+      'Du mouvement là où ça sert : un générique, une vidéo de présentation, ou juste un bouton qui réagit bien.',
     tools: ['After Effects', 'Figma Smart Animate'],
     // vidéo : lue en boucle, sans le son, quand la ligne est active
     image: '/videos/motion/vox.mp4',

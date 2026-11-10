@@ -10,8 +10,8 @@ import { scrollToY } from '../lib/smoothScroll';
 // (le badge s'agrandit jusqu'à remplir l'écran, comme une carte qu'on ouvre), puis la présentation arrive en cascade.
 // En remontant, tout se referme dans le badge.
 const WORDS: { text: string; strong?: boolean }[] = [
-  { text: '3 ans', strong: true },
-  ...'de BUT MMI à concevoir des interfaces, coder des sites et créer des jeux qui tournent vraiment, jusqu\'en production.'
+  { text: 'Designer', strong: true },
+  ...'qui code. Je dessine des interfaces, je développe des sites et je crée des jeux qui tournent vraiment, jusqu\'en production.'
     .split(' ')
     .map((text) => ({ text })),
 ];
