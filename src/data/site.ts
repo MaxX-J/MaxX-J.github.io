@@ -859,5 +859,9 @@ export function getProjectDetails(p: Project): ProjectDetails {
 
 
 // 20 aperçus (le 21e du prompt n'existe plus en ligne)
-// image principale de chacun des 13 projets, recadrée en 840x540 (voir public/images/marquee)
-export const MARQUEE_IMAGES = Array.from({ length: 13 }, (_, i) => preview(i + 1));
+// image principale des projets (Architruc en a deux), recadrée en 840x540 (voir public/images/marquee)
+// les 3 dernières ont un nom (et non un numéro) : un fichier remplacé sous le même nom reste en cache chez les visiteurs
+export const MARQUEE_IMAGES = [
+  ...Array.from({ length: 11 }, (_, i) => preview(i + 1)),
+  ...['architruc-realisations', 'loup-garou', 'planet-brick'].map((name) => `/images/marquee/${name}.webp`),
+];
