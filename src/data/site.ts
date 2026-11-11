@@ -6,7 +6,7 @@ export const CONTACT = {
   // Dépose ton CV en PDF dans public/ sous ce nom
   cv: '/cv-maxens-sevilla.pdf',
   // Dates du stage de 3e année, affichées dans la section contact (à confirmer)
-  stage: 'Stage du 2 février au 24 avril 2027',
+  stage: 'Stage du 1er février au 23 avril 2027',
 };
 
 // Dans l'ordre de l'accueil ; tous mènent à une section de l'accueil (id = l'ancre)
@@ -19,7 +19,7 @@ export const NAV_LINKS = [
 
 // Présentation affichée quand le badge </> s'ouvre
 export const ABOUT_TEXT =
-  "Je dessine une interface, je la code, puis je passe beaucoup trop de temps sur le détail que personne n'avait demandé. Curieux de tout, je touche à tout : design, web, 3D, son. Et quand je commence quelque chose, je le finis. Le reste du temps, je joue, je fais du sport, ou je me lance dans un projet perso de plus. Je cherche un stage du 2 février au 24 avril 2027.";
+  "Je dessine une interface, je la code, puis je passe beaucoup trop de temps sur le détail que personne n'avait demandé. Curieux de tout, je touche à tout : design, web, 3D, son. Et quand je commence quelque chose, je le finis. Le reste du temps, je joue, je fais du sport, ou je me lance dans un projet perso de plus. Je cherche un stage du 1er février au 23 avril 2027.";
 
 const V2 = '/images/projets/v2';
 
