@@ -337,7 +337,7 @@ export function initDesk({ section, canvas, fade, hint, pills }: DeskElements): 
   place(mouse, DESK.x + 0.62, DESK.y + 0.055, DESK.z + 0.2, desk);
 
   // tasse qui fume
-  var MUG = { x: DESK.x - 0.78, z: DESK.z + 0.2 };
+  var MUG = { x: DESK.x - 1.08, z: DESK.z + 0.2 };
   place(cyl(0.065, 0.06, 0.14, 32, M.mug), MUG.x, DESK.y + 0.1, MUG.z, desk);
   var handle = new THREE.Mesh(new THREE.TorusGeometry(0.038, 0.012, 10, 20), M.mug);
   handle.castShadow = true;
@@ -399,7 +399,7 @@ export function initDesk({ section, canvas, fade, hint, pills }: DeskElements): 
   });
   var pencil = cyl(0.006, 0.006, 0.17, 8, mat(0xFFC93C, 0.5)); pencil.rotation.z = Math.PI / 2; pencil.rotation.y = 0.6; pencil.position.set(-0.07, 0.018, 0.04); sketch.add(pencil);
   sketch.traverse(function (o) { if (o.isMesh) { o.castShadow = true; o.receiveShadow = true; } });
-  sketch.position.set(DESK.x - 0.6, DESK.y + 0.04, DESK.z + 0.22);
+  sketch.position.set(DESK.x - 0.69, DESK.y + 0.04, DESK.z + 0.22);
   sketch.rotation.y = 0.35;
   desk.add(sketch);
 
