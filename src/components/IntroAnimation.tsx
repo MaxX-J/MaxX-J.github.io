@@ -30,7 +30,7 @@ function targetRect() {
 export default function IntroAnimation() {
   const [done, setDone] = useState(!INTRO_PLAYS);
   const [scope, animate] = useAnimate();
-  const [size] = useState(() => Math.min(window.innerWidth * 0.42, 300));
+  const [size] = useState(() => Math.min(window.innerWidth * 0.6, window.innerHeight * 0.55, 440));
 
   useEffect(() => {
     if (done) return;

@@ -13,11 +13,10 @@ export default function Logo({ color = 'white', introTarget = false }: LogoProps
   const text = color === 'white' ? 'text-white' : 'text-orange-accent';
   const hidden = introTarget && !landed;
   return (
-    <Link to="/" className={`flex items-center gap-2.5 ${text}`} aria-label="Accueil">
+    <Link to="/" className={`flex items-center ${text}`} aria-label="Maxens Sevilla — accueil">
       <span data-intro-target={introTarget || undefined} style={{ opacity: hidden ? 0 : 1 }} className="block">
-        <LogoMark className="block h-8 w-auto sm:h-9" />
+        <LogoMark className="block h-10 w-auto sm:h-11" />
       </span>
-      <span className="text-lg font-bold sm:text-xl">Maxens</span>
     </Link>
   );
 }

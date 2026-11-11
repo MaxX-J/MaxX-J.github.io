@@ -26,7 +26,7 @@ const short = (s) => {
   const cut = t.slice(0, 157);
   return cut.slice(0, cut.lastIndexOf(' ')) + '…';
 };
-const ogImage = (slug) => (existsSync(join(dist, 'og', `${slug}.jpg`)) ? `${SITE}/og/${slug}.jpg` : `${SITE}/og/accueil.jpg`);
+const ogImage = (slug) => (existsSync(join(dist, 'og', `${slug}.jpg`)) ? `${SITE}/og/${slug}.jpg` : `${SITE}/og/accueil.jpg?v=2`);
 
 function page({ path, title, description, image }) {
   const url = SITE + path;
@@ -60,14 +60,14 @@ const home = {
   path: '/',
   title: 'Maxens Sevilla — Designer UI/UX, dév web & 3D',
   description: 'Designer qui code : interfaces, sites web, jeux et VR. Portfolio de Maxens Sevilla, en BUT MMI à Béziers, qui cherche un stage du 2 février au 24 avril 2027.',
-  image: `${SITE}/og/accueil.jpg`,
+  image: `${SITE}/og/accueil.jpg?v=2`,
 };
 write(join(dist, 'index.html'), page(home));
 // Adresse inconnue : l'appli affiche sa page 404
 write(join(dist, '404.html'), page({ ...home, path: '/404' }));
 
 const pages = [home];
-const list = { path: '/projets/', title: 'Projets — Maxens Sevilla', description: `Tous mes projets, du BUT MMI 3 au MMI 1 : UI/UX, développement web, 3D et VR, motion design, graphisme et vidéo.`, image: `${SITE}/og/accueil.jpg` };
+const list = { path: '/projets/', title: 'Projets — Maxens Sevilla', description: `Tous mes projets, du BUT MMI 3 au MMI 1 : UI/UX, développement web, 3D et VR, motion design, graphisme et vidéo.`, image: `${SITE}/og/accueil.jpg?v=2` };
 write(join(dist, 'projets', 'index.html'), page(list));
 pages.push(list);
 
