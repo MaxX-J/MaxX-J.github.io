@@ -35,13 +35,31 @@ export function scrollToTop(immediate = false) {
   else window.scrollTo({ top: 0, behavior: immediate ? 'instant' : 'smooth' });
 }
 
+// Arrivée d'un long trajet : la page part déjà lancée (après le saut) et se pose en douceur
+const easeOutCubic = (t: number) => 1 - (1 - t) ** 3;
+
 export function scrollToElement(el: HTMLElement) {
+  const current = lenis ? lenis.scroll : window.scrollY;
+  const target = el.getBoundingClientRect().top + window.scrollY;
+  const distance = target - current;
+  // Loin (plus de 2 écrans) : on saute à un écran de la cible puis on glisse le dernier écran,
+  // pour ne pas traverser en accéléré le bureau 3D, le manifeste et les cartes projets
+  const far = Math.abs(distance) > window.innerHeight * 2;
+  const jumpTo = target - Math.sign(distance) * window.innerHeight;
+
   if (lenis) {
     // après un changement de page, Lenis garde la hauteur de l'ancienne : on la remesure avant de partir
     lenis.resize();
-    lenis.scrollTo(el, { duration: 1.8, easing: easeInOutQuart });
+    if (far) {
+      lenis.scrollTo(jumpTo, { immediate: true, force: true });
+      lenis.scrollTo(el, { duration: 1.1, easing: easeOutCubic, force: true });
+    } else {
+      lenis.scrollTo(el, { duration: 1.8, easing: easeInOutQuart });
+    }
+    return;
   }
-  else el.scrollIntoView({ behavior: 'smooth' });
+  if (far) window.scrollTo({ top: jumpTo, behavior: 'instant' });
+  el.scrollIntoView({ behavior: 'smooth' });
 }
 
 // Défile jusqu'à une position précise (en px depuis le haut de la page)
