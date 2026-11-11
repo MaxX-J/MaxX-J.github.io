@@ -71,7 +71,7 @@ export default function Navbar() {
     <>
       {/* Barre du haut de page, posée sur le hero */}
       <nav className="relative z-20 flex items-center justify-between px-4 py-4 sm:px-6 sm:py-5 md:px-12">
-        <Logo />
+        <Logo introTarget />
         <div className="hidden gap-1 md:flex">
           {NAV_LINKS.map((link) => (
             <SectionLink

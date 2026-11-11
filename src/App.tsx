@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
+import IntroAnimation from './components/IntroAnimation';
 import { scrollToElement, scrollToTop, startSmoothScroll } from './lib/smoothScroll';
 import HomePage from './pages/HomePage';
 import NotFoundPage from './pages/NotFoundPage';
@@ -32,6 +33,7 @@ export default function App() {
   return (
     <>
       <ScrollManager />
+      <IntroAnimation />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/projets" element={<ProjectsPage />} />

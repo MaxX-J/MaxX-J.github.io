@@ -1,16 +1,23 @@
 import { Link } from 'react-router-dom';
+import { useIntro } from '../lib/intro';
+import LogoMark from './LogoMark';
 
-export default function Logo({ color = 'white' }: { color?: 'white' | 'orange' }) {
-  const dot = color === 'white' ? 'bg-white' : 'bg-orange-accent';
+type LogoProps = {
+  color?: 'white' | 'orange';
+  // Logo de la nav du hero : c'est là que vient se poser le logo de l'intro
+  introTarget?: boolean;
+};
+
+export default function Logo({ color = 'white', introTarget = false }: LogoProps) {
+  const { landed } = useIntro();
   const text = color === 'white' ? 'text-white' : 'text-orange-accent';
+  const hidden = introTarget && !landed;
   return (
-    <Link to="/" className="flex items-center gap-2" aria-label="Accueil">
-      <span className="grid grid-cols-2 gap-0.5">
-        {[0, 1, 2, 3].map((i) => (
-          <span key={i} className={`h-2.5 w-2.5 rounded-full sm:h-3 sm:w-3 ${dot}`} />
-        ))}
+    <Link to="/" className={`flex items-center gap-2.5 ${text}`} aria-label="Accueil">
+      <span data-intro-target={introTarget || undefined} style={{ opacity: hidden ? 0 : 1 }} className="block">
+        <LogoMark className="block h-8 w-auto sm:h-9" />
       </span>
-      <span className={`ml-1 text-lg font-bold sm:text-xl ${text}`}>Maxens</span>
+      <span className="text-lg font-bold sm:text-xl">Maxens</span>
     </Link>
   );
 }
